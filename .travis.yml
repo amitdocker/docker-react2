@@ -5,6 +5,6 @@ services:
 before_install:
     - docker build -t amitdocker/docker-react2 -f Dockerfile.dev .
 script:
-    - docker run -e CI=true amitdocker/docker-react2 npm run test
+     - docker run amitdocker/docker-react2 npm run test -- --coverage
 
 
